@@ -7,6 +7,8 @@ end.run_action(:run)
 
 package "git-core"
 package "tar"
+package "ntp"
+package "sysstat"
 
 #include MYSQL ruby drivers
 
