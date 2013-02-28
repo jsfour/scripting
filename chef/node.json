@@ -1,3 +1,8 @@
 {
+	"mysql": {
+        "server_root_password": "mysqlrootpassword",
+        "server_repl_password": "mysqlrootpassword",
+        "server_debian_password": "mysqlrootpassword"
+    },
 	"run_list": ["recipe[main]", "recipe[mysql::server]"]
 }
