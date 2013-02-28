@@ -4,5 +4,10 @@
         "server_repl_password": "mysqlrootpassword",
         "server_debian_password": "mysqlrootpassword"
     },
+	"postgresql": {
+        "password": {
+          "postgres": "postgresrootpassword"
+        }
+      },
 	"run_list": ["recipe[main]"]
 }
