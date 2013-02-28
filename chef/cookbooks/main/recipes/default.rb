@@ -5,13 +5,8 @@ execute "update package index" do
   action :nothing
 end.run_action(:run)
 
-package "git-core" do
-  action :install
-end
-
-package "tar" do
-  action :install
-end
+package "git-core"
+package "tar"
 
 #include MYSQL ruby drivers
 
