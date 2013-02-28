@@ -7,13 +7,10 @@ end.run_action(:run)
 
 package "git-core" do
   action :install
-  options "--force-yes"
-  provider Chef::Provider::Package::Apt
 end
 
 package "tar" do
   action :install
-  provider Chef::Provider::Package::Apt
 end
 
 #include MYSQL ruby drivers
