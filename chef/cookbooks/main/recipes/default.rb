@@ -1,3 +1,9 @@
-package "git-core"
-pagkage "build-essential"
+package "git-core" do
+  action :install
+  options "--force-yes"
+end
+pagkage "build-essential" do
+  action :install
+  options "--force-yes"
+end
 
