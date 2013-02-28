@@ -10,7 +10,7 @@ package "openssl"
 package "build-essential"
 
 
-#include MYSQL ruby drivers
+#Install databases
 include_recipe "mysql::server"
 include_recipe "mysql::ruby"
 include_recipe "postgresql::server"
@@ -22,8 +22,9 @@ execute "Install rvm" do
   action :run
 end
 
-#setup rails
-#Setup guard
+# Setup rails 3.1
+# Setup guard
+# Install guard script
 
 # Setup Environment
 # This is not workig correctly.
