@@ -6,7 +6,7 @@
     },
 	"postgresql": {
         "password": {
-          "postgres": "postgresrootpassword"
+          "postgres": "postgresrootpassword" //postgresrootpassword
         }
     },
 	"users": {
