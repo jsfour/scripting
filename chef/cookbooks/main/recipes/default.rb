@@ -35,7 +35,7 @@ include_recipe "postgresql::ruby"
 
 # Setup Environment
 execute "Configure rails development environment" do
-  command "echo 'export RAILS_ENV=development' >> ~/.bashrc"
+  command "echo 'export RAILS_ENV=development' >> ~/.bash_profile"
   not_if "if [ '$RAILS_ENV' == 'development' ]; then true; else false; fi"
   action :run
 end
