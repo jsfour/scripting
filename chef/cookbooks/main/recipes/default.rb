@@ -9,11 +9,11 @@ end
 # Should I add : [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 execute "Install Ruby 1.9.2" do
-  command "source /etc/profile.d/rvm.sh; rvm install 1.9.2"
+  command "source /home/vagrant/.rvm/scripts/rvm; rvm install 1.9.2"
 end
 
 execute "Install Redline" do
-  command "source /etc/profile.d/rvm.sh; rvm pkg install readline"
+  command "source /home/vagrant/.rvm/scripts/rvm; rvm pkg install readline"
   creates "/usr/local/rvm/src/readline-5.2"
 end
 
