@@ -8,18 +8,12 @@ execute "Install rvm" do
 end
 # Should I add : [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
-group "rvm" do
-  action :modify
-  members ["vagrant"]
-  append
-end
-
 execute "Install Ruby 1.9.2" do
   command "source /etc/profile.d/rvm.sh; rvm install 1.9.2"
 end
 
 execute "Install Redline" do
-  command "rvm pkg install readline"
+  command "source /etc/profile.d/rvm.sh; rvm pkg install readline"
   creates "/usr/local/rvm/src/readline-5.2"
 end
 
