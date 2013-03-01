@@ -31,6 +31,7 @@ include_recipe "postgresql::ruby"
 
 # Setup guard
 # Install guard script
+#set RVM global rvm gemset use global
 
 # Setup Environment
 execute "Configure rails development environment" do
