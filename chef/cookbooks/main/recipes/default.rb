@@ -9,12 +9,12 @@ end
 
 execute "Install Ruby 1.9.2" do
   user "vagrant"
-  command "source /home/vagrant/.rvm/scripts/rvm; rvm install 1.9.2"
+  command "rvm install 1.9.2"
 end
 
 execute "Install Redline" do
   user "vagrant"
-  command "source /home/vagrant/.rvm/scripts/rvm; rvm pkg install readline"
+  command "rvm pkg install readline"
   creates "/usr/local/rvm/src/readline-5.2"
 end
 
