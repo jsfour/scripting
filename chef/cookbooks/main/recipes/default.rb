@@ -3,8 +3,8 @@
 #give him sudo
 execute "Install rvm" do
   user "vagrant"
-  command "curl -L https://get.rvm.io | bash -s stable --rails"
-  creates "~/.rvm/scripts/rvm"
+  command "curl -L https://get.rvm.io | bash -s stable"
+  creates "/home/vagrant/.rvm/scripts/rvm"
 end
 
 execute "Install Ruby 1.9.2" do
