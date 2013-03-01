@@ -3,7 +3,7 @@
 #give him sudo
 execute "Install rvm" do
   user "vagrant"
-  command "curl -L https://get.rvm.io | bash -s stable"
+  command "curl -L https://get.rvm.io | bash -s stable --ruby"
   creates "/home/vagrant/.rvm/scripts/rvm"
 end
 
