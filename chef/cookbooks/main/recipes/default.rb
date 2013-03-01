@@ -2,6 +2,7 @@
 
 #give him sudo
 execute "Install rvm" do
+  user "vagrant"
   command "curl -L https://get.rvm.io | bash -s stable --rails"
   creates "/usr/local/rvm"
 end
