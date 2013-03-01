@@ -18,10 +18,6 @@ execute "Install Redline" do
   creates "/usr/local/rvm/src/readline-5.2"
 end
 
-package "libopenssl-ruby"
-package "libxslt-dev"
-package "libxml2-dev"
-
 # Configure Rails Dev Stack --install rails with a bundle install command in rails folder
 include_recipe "mysql::server"
 #SETUP a "development" user with full access
