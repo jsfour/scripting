@@ -7,19 +7,14 @@ execute "Install rvm" do
   creates "/home/vagrant/.rvm/scripts/rvm"
 end
 
-execute "Get RVM rolling" do
-  user "vagrant"
-  command "source /home/vagrant/.rvm/scripts/rvm"
-end
-
 execute "Install Ruby 1.9.2" do
   user "vagrant"
-  command "rvm install 1.9.2"
+  command "/home/vagrant/.rvm/scripts/rvm install 1.9.2"
 end
 
 execute "Install Redline" do
   user "vagrant"
-  command "rvm pkg install readline"
+  command "/home/vagrant/.rvm/scripts/rvm pkg install readline"
   creates "/usr/local/rvm/src/readline-5.2"
 end
 
