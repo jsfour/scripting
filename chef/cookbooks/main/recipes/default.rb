@@ -6,7 +6,6 @@ execute "Install rvm" do
   command "curl -L https://get.rvm.io | bash -s stable --rails"
   creates "~/.rvm/scripts/rvm"
 end
-# Should I add : [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 execute "Install Ruby 1.9.2" do
   user "vagrant"
