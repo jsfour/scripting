@@ -4,15 +4,17 @@
 execute "Install rvm" do
   user "vagrant"
   command "curl -L https://get.rvm.io | bash -s stable --rails"
-  creates "/usr/local/rvm"
+  creates "~/.rvm/scripts/rvm"
 end
 # Should I add : [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 execute "Install Ruby 1.9.2" do
+  user "vagrant"
   command "source /home/vagrant/.rvm/scripts/rvm; rvm install 1.9.2"
 end
 
 execute "Install Redline" do
+  user "vagrant"
   command "source /home/vagrant/.rvm/scripts/rvm; rvm pkg install readline"
   creates "/usr/local/rvm/src/readline-5.2"
 end
