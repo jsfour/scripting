@@ -9,7 +9,7 @@ end
 
 execute "Get RVM rolling" do
   user "vagrant"
-  command "source ~/.rvm/scripts/rvm"
+  command "source /home/vagrant/.rvm/scripts/rvm"
 end
 
 execute "Install Ruby 1.9.2" do
