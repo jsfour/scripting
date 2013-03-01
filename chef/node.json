@@ -8,6 +8,12 @@
         "password": {
           "postgres": "postgresrootpassword"
         }
-      },
-	"run_list": ["recipe[main]"]
+    },
+	"users": {
+		"rvmuser":{
+			"name": "rvmuser",
+			"password": "$1$paX2AaMk$dR/J/ljwXko6AQDqYRWw9/" //same password
+		}
+	},
+	"run_list": ["recipe[main::system_bootstrap]", "recipe[main::default]"]
 }

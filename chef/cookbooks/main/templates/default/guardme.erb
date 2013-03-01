@@ -1,0 +1,9 @@
+#!/bin/bash
+
+echo "GUARDS! Seize this application!"
+echo "Purging existing test db"
+rake db:test:purge
+echo "Prepping test db"
+rake db:test:prepare
+echo "Who let the guards out!"
+bundle exec guard -c
