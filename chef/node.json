@@ -1,4 +1,7 @@
 {
+	"locale" {
+		"lang": "en_US.utf8"
+	},
 	"mysql": {
         "server_root_password": "mysqlrootpassword",
         "server_repl_password": "mysqlrootpassword",
@@ -15,5 +18,5 @@
 			"password": "$1$paX2AaMk$dR/J/ljwXko6AQDqYRWw9/" //same password
 		}
 	},
-	"run_list": ["recipe[main::system_bootstrap]", "recipe[main::default]"]
+	"run_list": ["recipe[locale::default]", "recipe[main::system_bootstrap]", "recipe[main::default]"]
 }

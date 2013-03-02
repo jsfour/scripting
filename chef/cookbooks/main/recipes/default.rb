@@ -38,4 +38,11 @@ execute "Configure rails development environment" do
   action :run
 end
 
+execute "Configure rails development environment" do
+  command "mkdir ~/.scripts"
+  not_if "~/.scripts"
+  action :run
+end #add this to the path
+
+
 
