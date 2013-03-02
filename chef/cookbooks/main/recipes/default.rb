@@ -44,5 +44,7 @@ execute "Configure rails development environment" do
   action :run
 end #add this to the path
 
+#create a db template for postgress createdb --template=template0 --encoding=UTF-8 --locale=en_US.utf8 -h localhost -u postgres utf_template0
+
 
 
