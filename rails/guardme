@@ -3,7 +3,9 @@
 echo "GUARDS! Seize this application!"
 echo "Purging existing test db"
 rake db:test:purge
+rake db:test:purge RAILS_ENV=statistics_test
 echo "Prepping test db"
 rake db:test:prepare
+rake db:test:prepare RAILS_ENV=statistics_test
 echo "Who let the guards out!"
 bundle exec guard -c
