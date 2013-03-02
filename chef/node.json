@@ -1,5 +1,5 @@
 {
-	"locale" {
+	"locale": {
 		"lang": "en_US.utf8"
 	},
 	"mysql": {
