@@ -26,6 +26,10 @@ include_recipe "postgresql::server"
 #SETUP a "development" user with full access
 include_recipe "postgresql::client"
 include_recipe "postgresql::ruby"
+#Setup Redis
+include_recipe "redisio::default"
+include_recipe "redisio::install"
+include_recipe "redisio::enable"
 
 # Setup guard
 # Install guard script
