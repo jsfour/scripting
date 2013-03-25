@@ -23,7 +23,7 @@
 	},
 	"redisio": {
 		"servers": [
-			{"port": "6379", "name": "redisdb"}, 
+			{"port": "6379", "name": "redisdb"}
 		]
 	},
 	"run_list": ["recipe[locale::default]", "recipe[main::system_bootstrap]", "recipe[main::default]"]
