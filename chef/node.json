@@ -18,5 +18,8 @@
 			"password": "$1$paX2AaMk$dR/J/ljwXko6AQDqYRWw9/" //same password
 		}
 	},
+	"environment": {
+		"rails_env": "development"
+	},
 	"run_list": ["recipe[locale::default]", "recipe[main::system_bootstrap]", "recipe[main::default]"]
 }
