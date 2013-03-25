@@ -26,5 +26,11 @@
 			{"port": "6379", "name": "redisdb"}
 		]
 	},
-	"run_list": ["recipe[locale::default]", "recipe[main::system_bootstrap]", "recipe[main::default]"]
+	"run_list": [
+		"recipe[locale::default]",
+		"recipe[main::system_bootstrap]",
+		"recipe[redisio::default]",
+		"recipe[redisio::install]",
+		"recipe[redisio::enable]",
+		"recipe[main::default]"]
 }
