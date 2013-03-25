@@ -22,7 +22,10 @@
 		"rails_env": "development"
 	},
 	"redisio": {
-		'servers': [{"port": "6379", "name": "videosRedis"}, {"port": "6380", "name": "billingprofilesRedis"}]
+		"servers": [
+			{"port": "6379", "name": "videosRedis"}, 
+			{"port": "6380", "name": "billingprofilesRedis"}
+		]
 	},
 	"run_list": ["recipe[locale::default]", "recipe[main::system_bootstrap]", "recipe[main::default]"]
 }
