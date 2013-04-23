@@ -23,14 +23,23 @@
 	},
 	"redisio": {
 		"servers": [
-			{"port": "6379", "name": "redisdb"}
+			{
+				"port": "6379",
+				"name": "redisdb"
+			}
 		]
 	},
 	"run_list": [
 		"recipe[locale::default]",
+		"recipe[mysql::server]",
+		"recipe[mysql::ruby]",
+		"recipe[postgresql::server]",
+		"recipe[postgresql::client]",
+		"recipe[postgresql::ruby]",
 		"recipe[main::system_bootstrap]",
 		"recipe[redisio::default]",
 		"recipe[redisio::install]",
 		"recipe[redisio::enable]",
-		"recipe[main::default]"]
+		"recipe[main::default]"
+	]
 }

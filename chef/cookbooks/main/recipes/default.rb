@@ -18,14 +18,6 @@ execute "Install Redline" do
   creates "/usr/local/rvm/src/readline-5.2"
 end
 
-# Configure Rails Dev Stack --install rails with a bundle install command in rails folder
-include_recipe "mysql::server"
-#SETUP a "development" user with full access
-include_recipe "mysql::ruby"
-include_recipe "postgresql::server"
-#SETUP a "development" user with full access
-include_recipe "postgresql::client"
-include_recipe "postgresql::ruby"
 
 # Setup guard
 # Install guard script
