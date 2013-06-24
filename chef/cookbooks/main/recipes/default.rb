@@ -12,16 +12,17 @@ execute "Install Ruby 1.9.2" do
   command "/home/vagrant/.rvm/bin/rvm install 1.9.2"
 end
 
+execute "Install Ruby 1.9.3" do
+  user "vagrant"
+  command "/home/vagrant/.rvm/bin/rvm install 1.9.3"
+end
+
+#install redline
 execute "Install Redline" do
   user "vagrant"
   command "/home/vagrant/.rvm/bin/rvm pkg install readline"
   creates "/usr/local/rvm/src/readline-5.2"
 end
-
-
-# Setup guard
-# Install guard script
-#set RVM global rvm gemset use global
 
 # Setup Environment
 execute "Configure rails development environment" do
@@ -29,14 +30,5 @@ execute "Configure rails development environment" do
   not_if "if [ '$RAILS_ENV' == '#{node[:environment][:rails_env]}' ]; then true; else false; fi"
   action :run
 end
-
-execute "Configure rails development environment" do
-  command "mkdir ~/.scripts"
-  not_if "~/.scripts"
-  action :run
-end #add this to the path
-
-#create a db template for postgress createdb --template=template0 --encoding=UTF-8 --locale=en_US.utf8 -h localhost -u postgres utf_template0
-
 
 
