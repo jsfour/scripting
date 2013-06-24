@@ -2,20 +2,24 @@
 
 #give him sudo
 execute "Install rvm" do
+  user "vagrant"
   command "curl -L https://get.rvm.io | bash -s stable --ruby"
   creates "/home/vagrant/.rvm/bin/rvm"
 end
 
 execute "Install Ruby 1.9.2" do
+  user "vagrant"
   command "/home/vagrant/.rvm/bin/rvm install 1.9.2"
 end
 
 execute "Install Ruby 1.9.3" do
+  user "vagrant"
   command "/home/vagrant/.rvm/bin/rvm install 1.9.3"
 end
 
 #install redline
 execute "Install Redline" do
+  user "vagrant"
   command "/home/vagrant/.rvm/bin/rvm pkg install readline"
   creates "/usr/local/rvm/src/readline-5.2"
 end
